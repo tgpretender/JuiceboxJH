@@ -83,7 +83,7 @@ async function createPost({
   authorId,
   title,
   content,
-  tags = [] // this is new
+  tags = []
 }) {
   try {
     const { rows: [ post ] } = await client.query(`
@@ -308,6 +308,7 @@ async function getUserByUsername(username) {
     throw error;
   }
 }
+
 
 module.exports = {  
   client,
